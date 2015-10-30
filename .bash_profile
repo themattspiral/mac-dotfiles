@@ -1,5 +1,5 @@
 # PATH - ensure user-installed apps are default
-PATH=/usr/local/bin:$PATH
+PATH=/usr/local/bin:/Users/matt.ritter/android-sdk-macosx/platform-tools:$PATH
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -20,7 +20,6 @@ alias c='clear'
 alias ls='ls -G'
 alias ll='ls -Gal'
 alias htop='sudo htop'
-alias code='cd /Users/matt.ritter/code/'
 
 ## get rid of command not found ##
 alias cd..='cd ..'
@@ -37,3 +36,20 @@ alias .5='cd ../../../../..'
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
   fi
+
+# git - useful tricks
+alias branchhist='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr (%cn)" $branch | head -n 1` \\t$branch; done | sort -r'
+
+## PROJECT SPECIFIC ##
+alias ard='cd /Users/matt.ritter/Documents/Arduino'
+alias code='cd /Users/matt.ritter/code'
+alias cb='cd /Users/matt.ritter/code/cb'
+alias sb='cd /Users/matt.ritter/code/sbnet'
+alias gmd='grunt env:mockApi server:dev'
+alias ua='cd /Users/matt.ritter/code/sbnet/tools/git; ./update-all-repos.sh; cd ../..;'
+checkoutAll() {
+  cd /Users/matt.ritter/code/sbnet/;
+  ./tools/git/checkout-branch-all-repos.sh $1;
+}
+alias ca=checkoutAll
+alias hero='cd /Users/matt.ritter/Dropbox/Apps/Heroku'
