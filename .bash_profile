@@ -52,4 +52,5 @@ checkoutAll() {
   ./tools/git/checkout-branch-all-repos.sh $1;
 }
 alias ca=checkoutAll
+alias fa='cd /Users/matt.ritter/code/sbnet/tools/git; ./fetch-all-repos.sh; cd ../..;'
 alias hero='cd /Users/matt.ritter/Dropbox/Apps/Heroku'
