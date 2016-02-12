@@ -1,5 +1,6 @@
 # PATH - ensure user-installed apps are default
-PATH=/usr/local/bin:/Users/matt.ritter/android-sdk-macosx/platform-tools:$PATH
+#PATH=/usr/local/bin:/Users/matt.ritter/android-sdk-macosx/platform-tools:$PATH
+PATH=/usr/local/bin:$PATH
 
 # Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -46,6 +47,7 @@ alias code='cd /Users/matt.ritter/code'
 alias cb='cd /Users/matt.ritter/code/cb'
 alias sb='cd /Users/matt.ritter/code/sbnet'
 alias gmd='grunt env:mockApi server:dev'
+alias gdd='grunt env:dev2 server:dev'
 alias ua='cd /Users/matt.ritter/code/sbnet/tools/git; ./update-all-repos.sh; cd ../..;'
 checkoutAll() {
   cd /Users/matt.ritter/code/sbnet/;
