@@ -21,6 +21,10 @@ alias c='clear'
 alias ls='ls -G'
 alias ll='ls -Gal'
 alias htop='sudo htop'
+usedSpace() {
+  du -h -d 1 $1;
+}
+alias used=usedSpace
 
 ## get rid of command not found ##
 alias cd..='cd ..'
@@ -42,17 +46,12 @@ alias .5='cd ../../../../..'
 alias branchhist='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr (%cn)" $branch | head -n 1` \\t$branch; done | sort -r'
 
 ## PROJECT SPECIFIC ##
+alias drive='cd /Users/matt.ritter/Google\ Drive'
 alias ard='cd /Users/matt.ritter/Documents/Arduino'
 alias code='cd /Users/matt.ritter/code'
-alias cb='cd /Users/matt.ritter/code/cb'
-alias sb='cd /Users/matt.ritter/code/sbnet'
-alias gmd='grunt env:mockApi server:dev'
-alias gdd='grunt env:dev2 server:dev'
-alias ua='cd /Users/matt.ritter/code/sbnet/tools/git; ./update-all-repos.sh; cd ../..;'
-checkoutAll() {
-  cd /Users/matt.ritter/code/sbnet/;
-  ./tools/git/checkout-branch-all-repos.sh $1;
-}
-alias ca=checkoutAll
-alias fa='cd /Users/matt.ritter/code/sbnet/tools/git; ./fetch-all-repos.sh; cd ../..;'
-alias hero='cd /Users/matt.ritter/Dropbox/Apps/Heroku'
+
+export M2=`brew --prefix maven`/libexec/bin
+export M2_HOME=`brew --prefix maven`/libexec
+
+export NVM_DIR="/Users/matt.ritter/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
