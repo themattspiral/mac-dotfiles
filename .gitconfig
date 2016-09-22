@@ -1,3 +1,6 @@
+[user]
+	name = Matt Ritter
+	email = matt.ritter@slalom.com
 [core]
 	excludesfile = /Users/matt.ritter/.gitignore_global
 [difftool "sourcetree"]
@@ -6,8 +9,5 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/DiffMerge.app/Contents/MacOS/DiffMerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 	trustExitCode = true
-[user]
-	name = Matt Ritter
-	email = matt.ritter@slalom.com
-[mergetool]
-	keepBackup = false
+[push]
+	default = simple
