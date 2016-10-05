@@ -42,13 +42,16 @@ alias .5='cd ../../../../..'
     . $(brew --prefix)/etc/bash_completion
   fi
 
-# git - useful tricks
+# git, npm, etc
 alias branchhist='for branch in `git branch -r | grep -v HEAD`;do echo -e `git show --format="%ci %cr (%cn)" $branch | head -n 1` \\t$branch; done | sort -r'
+alias newb="git checkout -b"
+alias npml="npm list --depth=0"
 
-## PROJECT SPECIFIC ##
+## SPECIFIC ##
 alias drive='cd /Users/matt.ritter/Google\ Drive'
 alias ard='cd /Users/matt.ritter/Documents/Arduino'
 alias code='cd /Users/matt.ritter/code'
+alias cbi='cd /Users/matt.ritter/code/cbi'
 
 export M2=`brew --prefix maven`/libexec/bin
 export M2_HOME=`brew --prefix maven`/libexec
