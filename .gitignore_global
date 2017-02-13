@@ -1,0 +1,15 @@
+*~
+.DS_Store
+
+# Intellij IDEA project files and/or directory
+*.iml
+*.ipr
+*.iws
+.idea
+
+# build
+npm-debug.log
+node_modules
+
+# coverage
+coverage
